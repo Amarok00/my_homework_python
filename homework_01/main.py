@@ -43,7 +43,9 @@ def filter_numbers(numbers_list,filter_type):
     """
     if filter_type == ODD:
         return [number for number in numbers_list if number % 2 != 0]
-    if filter_type == EVEN:
+    elif filter_type == EVEN:
         return [number for number in numbers_list if number % 2 == 0]
-    if filter_type == PRIME:
+    elif filter_type == PRIME:
         return [number for number in numbers_list if is_prime(number)]
+    else:
+        ValueError('Invalid value, correct incoming data')
