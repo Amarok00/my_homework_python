@@ -3,12 +3,12 @@ create dataclass `Engine`
 """
 from dataclasses import dataclass
 
-class Engine(): # Создаем класс двигатель 
-    def __init__(self,volume,pistons):# Инициализируем (с параметрами объем , поршни )
+class Engine(): 
+    def __init__(self,volume,pistons):
         self.volume = volume 
         self.pistons = pistons
 
-@dataclass  #Соответственно создаем датакласс
+@dataclass  
 class Engine:
     volume: int
     pistons: int 
