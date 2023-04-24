@@ -14,13 +14,14 @@ class Vehicle(ABC):
             if self.fuel > 0:
                 self.started = True
             else:
-                raise LowFuelError("Falled min fuel")
+                raise LowFuelError("Failed min fuel")
         else:
             return True
 
     def move(self, distance):
         fuel_need = distance * self.fuel_consumption
-        if fuel_need <= self.fuel:
-            self.fuel -= fuel_need
-        else:
+        if fuel_need > self.fuel:
             raise NotEnoughFuel("No fuel")
+        self.fuel -= fuel_need
+        
+            
