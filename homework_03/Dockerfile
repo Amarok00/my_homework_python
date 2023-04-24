@@ -1,3 +1,10 @@
+#Instructions on how to install this assembly.
+#Install docker on your device
+#Go to the package folder
+#docker run hello-world run the command to check the health
+#docker build . -t app this is the command run the installation of the program
+#docker run -p 8000:8000 -it app with this command, you will run the program on port 8000
+
 FROM python:3.11.3-bullseye 
 
 ENV PYTHONUBUFFERED=1
