@@ -10,7 +10,7 @@ app.include_router(user_router, prefix="/users")
 
 
 @app.get("/")
-def Index():
+def index():
     return {
         "message": "Index",
     }

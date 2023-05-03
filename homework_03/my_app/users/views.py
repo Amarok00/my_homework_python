@@ -20,7 +20,6 @@ def create_user(user_in: UserIn):
 
 @router.get("/me/", response_model=UserOut)
 def get_me(user: User = Depends(get_user_by_token)):
-    # def get_me(user:User):
     return User
 
 
@@ -33,9 +32,9 @@ def get_me(user: User = Depends(get_user_by_token)):
 )
 def get_user_by_id(user_id: int) -> User:
     user: User | None = crud.get_user_by_id(user_id=user_id)
-    if user:
-        return user
-    raise HTTPException(
-        status_code=status.HTTP_404_NOT_FOUND,
-        detail=f"User with id {user_id} not found",
-    )
+    if not user:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"User with id {user_id} not found",
+        )
+    return user

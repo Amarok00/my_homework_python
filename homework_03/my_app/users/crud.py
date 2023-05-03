@@ -12,7 +12,7 @@ class Storage(BaseModel):
         self.last_id += 1
         return self.last_id
 
-    def create_user(self, username: str):
+    def create_user(self, username: str) -> User:
         user = User(
             id=self.next_id,
             username=username,
