@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field
 from uuid import uuid4
+import logging
 
 
 class UserBase(BaseModel):
@@ -21,8 +22,8 @@ class UserIn(UserBase):
 
 def generate_token():
     token = str(uuid4())
-    print("New token:", token)
-    return str()
+    logging("New token:", token)
+    return token
 
 
 class User(UserBase):
