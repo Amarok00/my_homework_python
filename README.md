@@ -9,3 +9,6 @@ The second program: implementation of class functions.
 
 * The third program was published on 24/04/2023
 The third program tests working with Dockerfile and Fastapi
+
+* The fourth program was published on 21/06/2023
+The fourth program tests work with Sqlalchemy and Asyncio/aiohttp
