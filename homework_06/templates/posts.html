@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+<style></style>
+{% block title %}
+Posts list
+{% endblock %}
+{% from 'macros/flash.html' import show_flashed_messages_with_categories %}
+{% block body %}
+<h2 class="mt-5 ms-5 text-light">Posts list</h2>
+<div class="normal-icon ms-5">
+    <a href="{{ url_for('posts_app.add') }}" class="btn btn-xs btn-success ">
+        <i class="fa fa-check" aria-hidden="true"></i> Create new post
+    </a>
+</div>
+{{ show_flashed_messages_with_categories() }}
+{% if posts %}
+<h3 class="ms-5 text-warning">Posts:</h3>
+<ul class="list-group">
+
+    {% for post in posts %}
+    <li class="list-group-item p-0 ms-5">
+        <a class="btn btn-link w-100 h-100  text-start text-decoration-none "
+            href="{{ url_for('posts_app.details', post_id=post.id) }}">
+            #{{ post.id }} {{ post.title }}
+        </a>
+    </li>
+    {% endfor %}
+
+</ul>
+{% else %}
+<h3 class="text-warning">No products yet</h3>
+
+{% endif %}
+
+
+{% endblock %}

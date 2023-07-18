@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Post #{{ post.id }} info
+{% endblock %}
+{% from 'macros/flash.html' import show_flashed_messages_with_categories %}
+{% block body %}
+<h2 class="mt-5 ms-5 text-light">Post details:</h2>
+{{ show_flashed_messages_with_categories() }}
+<h3 class="text-warning ms-5 mt-5">"{{ post.title }}" </h3>
+<p class="text-light ms-5">{{ post.body }} </p>
+<div class="d d-inline-block d-flex"><div class="normal-icon ms-5">
+    <a href="{{ url_for('posts_app.confirm-delete', post_id=post.id) }}" class="btn btn-xs btn-danger ">
+        <i class="fa fa-check" aria-hidden="true"></i> Delete post
+    </a>
+</div>
+<div class="normal-icon ms-5">
+    <a href="{{ url_for('posts_app.posts') }}" class="btn btn-xs btn-success mb-5">
+        <i class="fa fa-check" aria-hidden="true"></i> Back to list <-
+    </a>
+</div>
+
+
+{% endblock %}
