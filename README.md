@@ -15,3 +15,6 @@ The fourth program tests work with Sqlalchemy and Asyncio/aiohttp
 
 * The fifth program was published on 09/07/2023
 The fifth program tests working with Flask and Bootstrap
+
+* The sixth program was published on 18.07.2023
+The sixth program is a ready-made mini project Flash and Bootstrap , Docker , Docker compose
