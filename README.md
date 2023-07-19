@@ -18,3 +18,6 @@ The fifth program tests working with Flask and Bootstrap
 
 * The sixth program was published on 18.07.2023
 The sixth program is a ready-made mini project Flash and Bootstrap , Docker , Docker compose
+
+*The seventh program was published on 07/19/2023 
+The seventh program is installing the Django project , configuring it , creating an application , and working with Django ORM
