@@ -21,3 +21,6 @@ The sixth program is a ready-made mini project Flash and Bootstrap , Docker , Do
 
 * The seventh program was published on 07/19/2023 
 The seventh program is installing the Django project , configuring it , creating an application , and working with Django ORM
+
+* The eighth program was published on 07/29/2023 
+The eighth program is working with Django projects working with Django Forms CBV and generics and working with celery and rabbitmq
