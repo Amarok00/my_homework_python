@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "lesson-32"
+version = "0.1.0"
+description = ""
+authors = ["Amarok00 <imka0012@gmail.com>"]
+readme = "README.md"
+packages = [{include = "lesson_32"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.3"
+celery = "^5.3.1"
+django-celery-results = "^2.5.1"
+django-mail-templated = "^2.6.5"
+
+
+[tool.poetry.group.dev.dependencies]
+django-debug-toolbar = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

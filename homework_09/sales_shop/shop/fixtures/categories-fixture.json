@@ -1,0 +1,47 @@
+[
+    {
+        "model": "shop.category",
+        "pk": 1,
+        "fields": {
+            "name": "default",
+            "description": "default category1",
+            "archived": false
+        }
+    },
+    {
+        "model": "shop.category",
+        "pk": 2,
+        "fields": {
+            "name": "Laptops",
+            "description": "computers",
+            "archived": false
+        }
+    },
+    {
+        "model": "shop.category",
+        "pk": 3,
+        "fields": {
+            "name": "smartpohes",
+            "description": "A new apple phone",
+            "archived": false
+        }
+    },
+    {
+        "model": "shop.category",
+        "pk": 4,
+        "fields": {
+            "name": "Phones",
+            "description": "New phones from USA",
+            "archived": false
+        }
+    },
+    {
+        "model": "shop.category",
+        "pk": 5,
+        "fields": {
+            "name": "asaa",
+            "description": "aaaa",
+            "archived": true
+        }
+    }
+]

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Delete category {{category.name}}
+{% endblock %}
+
+{% block body %}
+    <h1>Archived <code>{{category.name}}</code></h1>
+    <div class="alert alert-danger">
+        Are you sure want to archived category #{{category.pk}}
+        with description <code>{{category.name}}</code>?
+    </div>
+    <form method="post">
+        {% csrf_token %}
+        <input class="btn btn-danger" type="submit" value="Archived">
+    </form>
+    <div>
+    <a class="btn btn-info" href="{% url 'shop:category' pk=category.pk %}">Back
+        to category details</a>
+</div>
+{% endblock %}
