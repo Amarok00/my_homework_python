@@ -24,3 +24,6 @@ The seventh program is installing the Django project , configuring it , creating
 
 * The eighth program was published on 07/29/2023 
 The eighth program is working with Django projects working with Django Forms CBV and generics and working with celery and rabbitmq
+
+* The ninth program was published on 30.07.2023
+The ninth program works with Django projects , tests the operation of the application , creating and deleting models for testing
