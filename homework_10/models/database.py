@@ -1,4 +1,4 @@
-__all__= ("db",)
+__all__ = ("db",)
 
 from flask_sqlalchemy import SQLAlchemy
 

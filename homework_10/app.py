@@ -1,21 +1,17 @@
 from os import getenv
 
 import requests
-
-from flask import Flask
-from flask import render_template
+from flask import Flask, render_template
 from flask_migrate import Migrate
-from flask_sqlalchemy import SQLAlchemy
 from flask_wtf.csrf import CSRFProtect
 
-from models import db, Post
-from views.posts import posts_app 
-import config 
+from models import db
+from views.posts import posts_app
 
 POSTS_DATA_URL = "https://jsonplaceholder.typicode.com/posts"
 
 app = Flask(__name__)
-app.register_blueprint(posts_app,url_prefix=("/posts/"))
+app.register_blueprint(posts_app, url_prefix=("/posts/"))
 
 csrf = CSRFProtect(app)
 
@@ -36,15 +32,17 @@ def hello_root():
 def about_us():
     return render_template("about.html")
 
+
 def fetch_posts_data() -> list[dict]:
-    response=requests.get(POSTS_DATA_URL)
+    response = requests.get(POSTS_DATA_URL)
     data = response.json()
     return data
 
-@app.get("/placeholder/",endpoint="placeholder")
+
+@app.get("/placeholder/", endpoint="placeholder")
 def get_json_list():
     posts_data = fetch_posts_data()
-    return render_template("placeholder.html",posts_data=posts_data)
+    return render_template("placeholder.html", posts_data=posts_data)
 
 
 if __name__ == "__main__":
