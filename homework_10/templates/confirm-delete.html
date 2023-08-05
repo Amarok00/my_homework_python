@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Delete post #{{ post.id }}
+{% endblock %}
+
+{% block body %}
+<h3 class="mt-5 ms-5 text-danger" >Are you sure you want to delete post <code>{{ post.name }}</code>?</h3>
+<h4 class="ms-5 text-danger">This cannot be undone!</h4>
+<div class="normal-icon ms-5">
+    <a href="{{ url_for('posts_app.posts') }}" class="btn btn-xs btn-success mb-5">
+        <i class="fa fa-check" aria-hidden="true"></i> Back to list <-
+    </a>
+</div>
+<br />
+<div>
+    <form method="post">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+        <input class="btn btn-danger ms-5 " type="submit" value="Delete">
+    </form>
+</div>
+{% endblock %}

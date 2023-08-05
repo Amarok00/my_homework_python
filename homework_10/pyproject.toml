@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "shop"
+version = "0.1.0"
+description = ""
+authors = ["Amarok00 <imka0012@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+psycopg2 = "^2.9.6"
+flask-sqlalchemy = "^3.0.5"
+flask = "^2.3.2"
+flask-migrate = "^4.0.4"
+sqlalchemy = "<2"
+werkzeug = "^2.3.6"
+flask-wtf = "^1.1.1"
+aiohttp = "^3.8.4"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
