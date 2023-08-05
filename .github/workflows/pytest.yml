@@ -24,4 +24,4 @@ jobs:
         if [ -f homework_10/requirements.txt ]; then pip install -r homework_10/requirements.txt; fi
     - name: Test with pytest
       run: |
-        pytest homework_10 --exit-zero 
+        pytest homework_10 
