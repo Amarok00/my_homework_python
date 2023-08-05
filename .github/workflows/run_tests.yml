@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: 
             pip install pylint
-            pip install -r homework_10/requirements.txt.txt
+            pip install -r homework_10/requirements.txt
             
       - name: Run Pylint
         run: pylint /homework_10 
