@@ -11,8 +11,6 @@ from .forms.posts import PostForm
 posts_app = Blueprint("posts_app", __name__, url_prefix="posts")
 
 
-
-
 @posts_app.get("/", endpoint="posts")
 def get_post_list():
     posts: list[Post] = Post.query.order_by(Post.id).all()
@@ -20,9 +18,7 @@ def get_post_list():
 
 
 def get_post_by_id(post_id: int) -> Post:
-    return Post.query.get_or_404(
-        post_id, description=f"Post #{post_id} not found!"
-    )
+    return Post.query.get_or_404(post_id, description=f"Post #{post_id} not found!")
 
 
 @posts_app.get("/<int:post_id>/", endpoint="details")
@@ -64,6 +60,3 @@ def confirm_delete_post(post_id: int):
     flash(f"Deleted post #{post_id} {post_title!r}", category="danger")
     url = url_for("posts_app.posts")
     return redirect(url)
-
-
-
