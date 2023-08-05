@@ -27,4 +27,4 @@ jobs:
             pip install -r homework_10/requirements.txt
             
       - name: Run Pylint
-        run: pylint /homework_10 
+        run: pylint homework_10
